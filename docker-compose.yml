@@ -1,0 +1,13 @@
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+
+  script:
+   
+    build:
+      dockerfile: script.Dockerfile
+      context: ./
+    depends_on:
+       - web
